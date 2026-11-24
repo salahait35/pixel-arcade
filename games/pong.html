@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Pong · Pixel Arcade</title>
+    <link rel="stylesheet" href="../styles.css" />
+  </head>
+  <body class="game-page">
+    <header class="topbar">
+      <a class="back" href="../index.html">← Arcade</a>
+      <h1 class="pixel-title">Pong</h1>
+      <span class="best" id="best">BEST —</span>
+    </header>
+    <main class="stage">
+      <canvas id="game" class="game-canvas" width="640" height="400" tabindex="0" aria-label="Pong"></canvas>
+      <p class="hint"><kbd>↑</kbd> <kbd>↓</kbd> / <kbd>W</kbd> <kbd>S</kbd> or move the mouse · <kbd>Space</kbd> / tap to serve · <kbd>R</kbd> restart</p>
+    </main>
+    <div id="toast" class="toast" role="status" aria-live="polite"></div>
+    <script type="module" src="../src/ui/pong-ui.js"></script>
+  </body>
+</html>
