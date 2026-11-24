@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Pixel Arcade</title>
+    <meta name="description" content="Five tiny browser games on one hub: Flappy Pixel, Snake, Breakout, 2048 and Pong." />
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%F0%9F%95%B9%3C/text%3E%3C/svg%3E" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body class="hub">
+    <header class="hero">
+      <h1 class="pixel-title">Pixel Arcade</h1>
+      <p>Five tiny games. Zero dependencies. Your best scores stay in this browser.</p>
+    </header>
+
+    <main>
+      <section id="games" class="card-grid" aria-label="Games"></section>
+      <section class="hub-actions">
+        <button id="reset-scores" class="btn ghost" type="button">Reset all best scores</button>
+      </section>
+    </main>
+
+    <footer>
+      Pixel Arcade v0.1.0 · MIT licensed · built with plain HTML, CSS and JavaScript
+    </footer>
+
+    <div id="toast" class="toast" role="status" aria-live="polite"></div>
+
+    <template id="game-card">
+      <a class="card" href="#">
+        <span class="emoji" aria-hidden="true"></span>
+        <h2></h2>
+        <p class="tagline"></p>
+        <div class="meta">
+          <span class="controls"></span>
+          <span class="best"></span>
+        </div>
+        <span class="play">Play</span>
+      </a>
+    </template>
+
+    <script type="module" src="src/ui/hub.js"></script>
+  </body>
+</html>

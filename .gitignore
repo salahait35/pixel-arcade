@@ -1,0 +1,16 @@
+# OS / editor
+.DS_Store
+Thumbs.db
+*.swp
+.idea/
+.vscode/
+
+# Node (the project has no runtime dependencies, but tooling may add some)
+node_modules/
+npm-debug.log*
+
+# Local artefacts
+*.log
+coverage/
+dist/
+.tmp/

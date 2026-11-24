@@ -1,0 +1,28 @@
+{
+  "name": "pixel-arcade",
+  "version": "0.1.0",
+  "description": "Five tiny browser games on one hub — Flappy Pixel, Snake, Breakout, 2048 and Pong. Vanilla JS, HTML5 canvas, zero dependencies.",
+  "private": true,
+  "type": "module",
+  "license": "MIT",
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "start": "node scripts/serve.mjs",
+    "test": "node --test \"tests/**/*.test.js\"",
+    "test:watch": "node --test --watch \"tests/**/*.test.js\"",
+    "check": "node scripts/check.mjs",
+    "ci": "npm run check && npm test"
+  },
+  "keywords": [
+    "games",
+    "canvas",
+    "flappy-bird",
+    "snake",
+    "breakout",
+    "2048",
+    "pong",
+    "zero-dependencies"
+  ]
+}
