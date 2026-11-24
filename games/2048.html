@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>2048 · Pixel Arcade</title>
+    <link rel="stylesheet" href="../styles.css" />
+  </head>
+  <body class="game-page">
+    <header class="topbar">
+      <a class="back" href="../index.html">← Arcade</a>
+      <h1 class="pixel-title">2048</h1>
+      <span class="best" id="best">BEST —</span>
+    </header>
+    <main class="stage">
+      <canvas id="game" class="game-canvas" width="480" height="560" tabindex="0" aria-label="2048"></canvas>
+      <p class="hint"><kbd>Arrows</kbd> / <kbd>WASD</kbd> / swipe to slide · <kbd>R</kbd> new game</p>
+    </main>
+    <div id="toast" class="toast" role="status" aria-live="polite"></div>
+    <script type="module" src="../src/ui/2048-ui.js"></script>
+  </body>
+</html>
