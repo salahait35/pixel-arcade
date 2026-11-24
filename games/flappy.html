@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Flappy Pixel · Pixel Arcade</title>
+    <link rel="stylesheet" href="../styles.css" />
+  </head>
+  <body class="game-page">
+    <header class="topbar">
+      <a class="back" href="../index.html">← Arcade</a>
+      <h1 class="pixel-title">Flappy Pixel</h1>
+      <span class="best" id="best">BEST —</span>
+    </header>
+    <main class="stage">
+      <canvas id="game" class="game-canvas" width="360" height="640" tabindex="0" aria-label="Flappy Pixel"></canvas>
+      <p class="hint"><kbd>Space</kbd> / <kbd>↑</kbd> / tap to flap · <kbd>R</kbd> restart</p>
+    </main>
+    <div id="toast" class="toast" role="status" aria-live="polite"></div>
+    <script type="module" src="../src/ui/flappy-ui.js"></script>
+  </body>
+</html>
