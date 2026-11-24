@@ -5,6 +5,12 @@ The format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 
 ## [Unreleased]
 
+### Fixed
+
+- Snake: two quick direction presses (for example ↑ then ← while moving right) could
+  reverse the snake into its own neck. The new direction is now validated against the
+  direction the snake actually moves in, not against the queued one.
+
 ## [0.1.0] - 2026-11-24
 
 ### Added

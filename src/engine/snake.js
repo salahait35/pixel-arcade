@@ -47,13 +47,17 @@ export function restart(game) {
  * Queues a direction change for the next tick. A direction opposite to the
  * one the snake is heading in is ignored, because it would fold the snake
  * onto its own neck.
+ *
+ * The check is made against `game.dir` — the direction the snake will actually
+ * move in on the next tick — and never against a queued direction. Otherwise
+ * two quick presses (↑ then ← while moving right) would validate ← against ↑
+ * and let the snake reverse into itself.
  */
 export function setDirection(game, dir) {
   if (game.status === 'dead' || game.status === 'won') return;
-  const current = game.pendingDir ?? game.dir;
+  const current = game.dir;
   if (dir.x === -current.x && dir.y === -current.y) return;
-  if (dir.x === current.x && dir.y === current.y) return;
-  game.pendingDir = dir;
+  game.pendingDir = dir.x === current.x && dir.y === current.y ? null : dir;
   if (game.status === 'ready') game.status = 'playing';
 }
 

@@ -55,6 +55,28 @@ test('a direct reversal is ignored', () => {
   assert.deepEqual(game.dir, DIRECTIONS.right);
 });
 
+test('two quick presses cannot reverse the snake into itself', () => {
+  const game = createGame({ rng: createRng(3) });
+  start(game);
+  const [head] = game.snake;
+  // Both presses land before the next tick: ↑ then ← while moving right.
+  setDirection(game, DIRECTIONS.up);
+  setDirection(game, DIRECTIONS.left);
+  step(game);
+  assert.equal(game.status, 'playing', 'the snake must not die');
+  assert.deepEqual(game.snake[0], { x: head.x, y: head.y - 1 }, 'the ← press is ignored, ↑ is kept');
+});
+
+test('a quick press back to the current direction clears the queued turn', () => {
+  const game = createGame({ rng: createRng(3) });
+  start(game);
+  const [head] = game.snake;
+  setDirection(game, DIRECTIONS.up);
+  setDirection(game, DIRECTIONS.right);
+  step(game);
+  assert.deepEqual(game.snake[0], { x: head.x + 1, y: head.y });
+});
+
 test('turning takes effect on the next tick', () => {
   const game = createGame({ rng: createRng(3) });
   start(game);
