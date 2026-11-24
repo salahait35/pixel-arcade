@@ -1,0 +1,52 @@
+name: Bug report
+description: Something does not work the way it should
+title: "[Game] Short description"
+body:
+  - type: dropdown
+    id: game
+    attributes:
+      label: Game
+      options:
+        - Flappy Pixel
+        - Snake
+        - Breakout
+        - "2048"
+        - Pong
+        - Hub / scores
+        - Other
+    validations:
+      required: true
+  - type: input
+    id: environment
+    attributes:
+      label: Browser and OS
+      placeholder: "Chrome 142 on macOS 15 · Safari on iPhone 15"
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce
+      placeholder: |
+        1. Open …
+        2. Press …
+        3. …
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected behaviour
+    validations:
+      required: true
+  - type: textarea
+    id: actual
+    attributes:
+      label: Actual behaviour
+    validations:
+      required: true
+  - type: textarea
+    id: extra
+    attributes:
+      label: Anything else
+      description: Screenshots, recordings, console errors, frequency.
