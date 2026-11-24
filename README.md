@@ -1,6 +1,6 @@
 # 🕹️ Pixel Arcade
 
-[![CI](https://github.com/OWNER/pixel-arcade/actions/workflows/ci.yml/badge.svg)](https://github.com/OWNER/pixel-arcade/actions/workflows/ci.yml)
+[![CI](https://github.com/salahait35/pixel-arcade/actions/workflows/ci.yml/badge.svg)](https://github.com/salahait35/pixel-arcade/actions/workflows/ci.yml)
 ![No dependencies](https://img.shields.io/badge/dependencies-0-brightgreen)
 ![License: MIT](https://img.shields.io/badge/license-MIT-blue)
 

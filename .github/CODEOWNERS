@@ -1,2 +1,2 @@
-# Default reviewers. Replace OWNER with the GitHub user or team that maintains the repo.
-* @OWNER
+# Default reviewer for every pull request.
+* @salahait35
